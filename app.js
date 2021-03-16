@@ -28,18 +28,18 @@ async function changeFile () {
    await fs.writeFileSync( './JD_DailyBonus.js', content, 'utf8')
 }
 
-async function sendNotify (text,desp) {
-  const options ={
-    uri:  `https://sctapi.ftqq.com/${serverJ}.send`,
-    form: { text, desp },
-    json: true,
-    method: 'POST'
-  }
-  await rp.post(options).then(res=>{
-    console.log(res)
-  }).catch((err)=>{
-    console.log(err)
-  })
+async function sendNotify (title,desp) {
+    const options ={
+        uri: https://sctapi.ftqq.com/${serverJ}.send,
+        form: { title, desp },
+        json: true,
+        method: ‘POST’
+    }
+    await rp.post(options).then(res=>{
+        console.log(res)
+    }).catch((err)=>{
+            console.log(err)
+    })
 }
 
 async function start() {
